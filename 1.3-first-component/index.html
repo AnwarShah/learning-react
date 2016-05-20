@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>First Component</title>
+</head>
+<body>
+
+  <div id="app"></div>
+
+  <script src="../react-0.11.1.js"></script>
+  <script src="../JSXTransformer-0.11.1.js"></script>
+  <script type="text/jsx">
+  /** @jsx React.DOM */
+
+  var MessageBox = React.createClass({
+    render: function() {
+      return (<h2>Hello, World</h2>);
+    }
+  });
+
+  React.renderComponent(
+    <MessageBox />,
+    document.getElementById('app'),
+    function() {
+      console.log('after render');
+    }
+  );
+
+  </script>
+</body>
+</html>
