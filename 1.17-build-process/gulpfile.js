@@ -7,8 +7,8 @@ var gulp = require('gulp'),
 
 gulp.task('browserify', function(){
     gulp.src('./app/src/js/components/main.js')
-        .pipe(browserify({ transform: 'react '} ) )
-        .pipe(gulp.dest('./app/dist/js/'));
+        .pipe(browserify( { transform: 'reactify' } ) )
+        .pipe(gulp.dest('./app/dist/js'));
 });
 
 // launch browser in a port
@@ -32,6 +32,12 @@ gulp.task('connect', function() {
 // live reload js
 gulp.task('js', function () {
     gulp.src('./app/dist/**/*.js')
+        .pipe(connect.reload());
+});
+
+// live reload html
+gulp.task('html', function(){
+    gulp.src('./app/*.html')
         .pipe(connect.reload());
 });
 
