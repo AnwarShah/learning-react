@@ -14,7 +14,7 @@ gulp.task('browserify', function(){
 // launch browser in a port
 gulp.task('open', function() {
     var options = {
-        url: 'http://locahost:' + port,
+        url: 'http://localhost:' + port,
     };
     gulp.src('./app/index.html')
     .pipe(open('', options));
@@ -23,7 +23,7 @@ gulp.task('open', function() {
 // live reload server
 gulp.task('connect', function() {
     connect.server({
-        root: 'app',
+        proxy: "local.dev",
         port: port,
         livereload: true
     });
