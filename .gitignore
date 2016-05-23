@@ -2,4 +2,4 @@ Tutorial_Videos
 */build/*
 */node_modules/*
 */app/dist/*
-
+*/*/*.log
