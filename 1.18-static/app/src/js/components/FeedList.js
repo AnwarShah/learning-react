@@ -1,7 +1,7 @@
 /** @jsx React.DOM */
 
 var React = require('react'),
-    FeedList = require('./FeedItem');
+    FeedItem = require('./FeedItem');
 
 var FeedList = React.createClass({
 
