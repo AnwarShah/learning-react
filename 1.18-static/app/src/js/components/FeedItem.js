@@ -9,7 +9,7 @@ var FeedItem = React.createClass({
   render: function() {
     return (
       <li className="list-group-item">
-        <span className="badger badge-success">{this.props.voteCount}</span>
+        <span className="badge badge-success">{this.props.voteCount}</span>
         <h4>{this.props.title}</h4>
         <span>{this.props.desc}</span>
         <span className="pull-right">
